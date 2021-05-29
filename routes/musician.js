@@ -4,6 +4,12 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const schema = require('../store/schema');
 
+
+router.get('/Diana', (req, res) => {
+    res.status('200').send("We got it to work!");
+});
+
+
 // retrieve all musicians from data store
 router.get('/all', (req, res) => {
   const { musician } = req.app.locals;
